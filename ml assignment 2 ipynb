@@ -1,0 +1,386 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOAWdx3QQUCVbCuuLnTNupk",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/deekshaceeti/MachineLearning/blob/main/ml%20assignment%202%20ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 51,
+      "metadata": {
+        "id": "8JjD40DdQsAZ"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Use a python code to display the following star pattern using the for loop"
+      ],
+      "metadata": {
+        "id": "4jEB1RIAQ9Dy"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "K7nsJLERWlBN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list = [10,20,30,40,50,60,70,80,90,100]\n",
+        "for i in my_list [1::2]:\n",
+        "  print(i,end=\"\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "omHAtMz8Vmgi",
+        "outputId": "94719a50-55dc-4fef-f56a-ea1be8c7c93e"
+      },
+      "execution_count": 52,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20406080100"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "zxCW8XQjZu8a"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=[23, 'python', 23.98]\n",
+        "types = []\n",
+        "for i in x:\n",
+        "  types.append(type(i))\n",
+        "  print(x)\n",
+        "  print(types)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9QH0IB7rZB_2",
+        "outputId": "55f68756-2c12-4960-f946-024d76f9fa3c"
+      },
+      "execution_count": 53,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[23, 'python', 23.98]\n",
+            "[<class 'int'>]\n",
+            "[23, 'python', 23.98]\n",
+            "[<class 'int'>, <class 'str'>]\n",
+            "[23, 'python', 23.98]\n",
+            "[<class 'int'>, <class 'str'>, <class 'float'>]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def count_case(string):\n",
+        "  upper_count = 0\n",
+        "  lower_count = 0\n",
+        "  for char in string:\n",
+        "    if char.isupper():\n",
+        "      upper_count += 1\n",
+        "    elif char.islower(): \n",
+        "      lower_count += 1 \n",
+        "      return upper_count, lower_count\n",
+        "\n",
+        "input_string = 'The quick Brow Fox'\n",
+        "upper_count, lower_count = count_case(input_string) \n",
+        "\n",
+        "print(\"No. of upper-case characters:\", upper_count)\n",
+        "print(\"No. of lower-case characters:\", lower_count)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "69ReZqYpWulH",
+        "outputId": "3adf950b-323e-44ed-a9ac-b3165d4fff6d"
+      },
+      "execution_count": 54,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "No. of upper-case characters: 1\n",
+            "No. of lower-case characters: 1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Sample_List=[1,2,3,3,3,3,4,5]\n",
+        "Unique_List=[]\n",
+        "for i in Sample_List:\n",
+        "  if i not in Unique_List:\n",
+        "    Unique_List.append(i)\n",
+        "print(Unique_List)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tXESPkpUZ-j3",
+        "outputId": "09ce8f58-e438-4fa7-ad4b-b9c066afe36c"
+      },
+      "execution_count": 55,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "star='*'\n",
+        "for i in range(1,6):\n",
+        "  for j in range(1,i):\n",
+        "    print(\"*\", end='')\n",
+        "    print(\"\\r\")\n",
+        "    for i in range(6,1,-1):\n",
+        "      for j in range(1,i):\n",
+        "        print(\"*\", end='')\n",
+        "        print(\"\\r\")\n",
+        "    "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aFhRR1nWRucJ",
+        "outputId": "f121dd1f-ef1c-4bb0-8b31-0bd7e15b8cba"
+      },
+      "execution_count": 72,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n",
+            "*\r\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. Use looping to output the elements from a provided list present at odd indexes."
+      ],
+      "metadata": {
+        "id": "Hc6Ih98WT_R7"
+      }
+    }
+  ]
+}
